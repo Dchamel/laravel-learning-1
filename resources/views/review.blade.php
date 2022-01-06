@@ -16,12 +16,16 @@
         </div>
     @endif
 
-    <form action="post" action="{{ route('reviewCheck') }}">
+    <form method="post" action="{{ route('reviewCheck') }}">
+
         @csrf
+
         <input type="email" name="email" id="email" placeholder="Input Email" class="form-control mb-2">
         <input type="text" name="subject" id="subject" placeholder="Input Subject" class="form-control mb-2">
         <textarea name="message" id="message" rows="4" placeholder="Input your Review here..." class="form-control mb-2"></textarea>
-        <button type="submit">Send</button>
+
+        <button type="submit" class="btn btn-success">Send</button>
+
     </form>
 
 @endsection
