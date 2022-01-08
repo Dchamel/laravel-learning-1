@@ -6,6 +6,16 @@
 
     <h1>Review Page</h1>
 
+    <h2>All Reviews</h2>
+
+    @foreach ($reviews as $review)
+        <div class="alert alert-warning">
+            <h3>{{ $review->subject }}</h3>
+            <small>{{ $review->email }}</small>
+            <p class="mt-2 text-truncate">{{ $review->message }}</p>
+        </div>
+    @endforeach
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
